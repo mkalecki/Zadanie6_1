@@ -2,19 +2,13 @@ import java.util.Random;
 
 public class MultiArray {
 
-    int[][] numbers;
+    private int[][] numbers;
 
     MultiArray(int N, int M) {
 
         this.numbers = new int[N][M];
+        randomize();
 
-        Random rand = new Random();
-
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                numbers[i][j] = rand.nextInt(100);
-            }
-        }
     }
 
     void randomize() {
@@ -55,7 +49,7 @@ public class MultiArray {
     void print(){
         for (int i=0; i<numbers.length; i++){
             for (int j=0; j<numbers[i].length; j++) {
-                System.out.print(numbers[i][j] +" ");
+                System.out.printf("%3d ",numbers[i][j]);
 
             }
             System.out.println();
